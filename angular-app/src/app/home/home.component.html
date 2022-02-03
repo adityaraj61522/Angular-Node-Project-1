@@ -1,0 +1,36 @@
+<div class="container shadow-lg">
+    <div class="display">
+        <div class="img-view">
+            <img src= '{{ userData.img }}' class="img"/>
+            <input class="btn btn-primary edit" value="Change" type="file" multiple (change)="uploadImg($event)">
+        </div>
+        <hr>
+        <a routerLink="/update/{{userData.id}}"><button class="btn btn-primary edit-details"><i class="fas fa-edit"></i>Update Details</button></a>
+        <a routerLink=""><button class="btn btn-primary edit-details"><i class="fas fa-out"></i>Logout</button></a>
+        <div class="row details">
+            <div class="col-sm-6">
+                <p><strong><i class="fas fa-user"></i>  Name:</strong>  {{userData.firstname}}   {{userData.lastname}}</p>
+
+                <p><strong><i class="fas fa-birthday-cake"></i>  D.O.B:</strong>  {{userData.dob}}</p>
+
+                <p><strong><i class="fas fa-phone"></i>  Phone Number:</strong>  {{userData.mobile}}</p>
+
+                <p><strong><i class="fas fa-envelope-open-text"></i>  Email:</strong>  {{userData.email}}</p>
+
+                <p><strong><i class="fas fa-home"></i>  Hometown:</strong>  {{userData.hometown}} {{ userData.img }}</p>
+
+            </div>
+            <div class="col-sm-6">
+                <p><strong><i class="fas fa-address-card"></i>  Employee ID:</strong>  {{userData.id}}</p>
+
+                <p><strong><i class="fas fa-building"></i>  Department:</strong>  {{userData.emp_dept}}</p>
+
+                <p><strong><i class="fas fa-chalkboard-teacher"></i>  L1 Manager:</strong>  {{userData.l1_manager}}</p>
+
+                <p><strong><i class="fas fa-chalkboard-teacher"></i>  L2 Manager:</strong>  {{userData.l2_manager}}</p>
+
+                <p><strong><i class="fas fa-venus-mars"></i>  Gender:</strong>  {{userData.gender}}</p>
+            </div>
+        </div>
+    </div>
+</div>

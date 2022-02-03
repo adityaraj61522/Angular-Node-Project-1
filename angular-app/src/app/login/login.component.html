@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="login-box shadow-lg">
+        <form (ngSubmit)="submit()" #f="ngForm">
+            <h1 style="text-align: center;">Login</h1>
+            <input type="email" name="email" class="in" placeholder="Enter Your Email..." ngModel #email="ngModel" email required>
+            <span class="help-block" *ngIf="!email.valid && email.touched"><i class="fas fa-exclamation-circle"></i>Please enter a valid email!!!</span>
+            <input type="password" name="password" class="in" placeholder="Enter Your Password..." ngModel #password="ngModel" password required>
+            <span class="help-block" *ngIf="!password.valid && password.touched"><i class="fas fa-exclamation-circle"></i>Please enter a valid password!!!</span>
+            <button type="submit" class="lg-btn btn btn-success">Login</button>
+            <br>
+            <span class="help-cred" *ngIf="!correctPassword"><i class="fas fa-exclamation-circle"></i><strong>Invalid Credentials!!!</strong></span>
+            <p class="quest"><strong>New User?<a routerLink="/register">Register</a></strong></p>
+        </form>
+    </div>
+</div>
